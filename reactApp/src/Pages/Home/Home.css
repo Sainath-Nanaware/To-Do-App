@@ -12,6 +12,7 @@
 
 .header{
     background-color: var(--primary-component-bg-color);
+    border: 1px solid var(--primary-border-color);
     height: 92vh;
     width: 20vw;
     border-radius: 10px;
@@ -24,12 +25,12 @@
 .userInfo{
     background-color: var(--primary-component-bg-color);
     height: 15vh;
-    width:18vw
+    width:18vw;
 }
 .tabs {
     background-color: var(--primary-component-bg-color);
     height: 44vh;
-    width: 20vw;
+    width: 19vw;
     display: flex;
     flex-direction: column;
     justify-content: center;    
@@ -37,6 +38,7 @@
 }
 
 .tabs button{
+    color: #6b6b6b;
     height: 6vh;
     display: flex;
     justify-content: start;

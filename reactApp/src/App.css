@@ -6,4 +6,8 @@
 
 :root{
   --primary-component-bg-color:#212121;
+  --primary-title-font-color:#ffff;
+  --primary-sub-font-color: #6b6b6b;
+  --primary-border-color: #6b6b6b;
+
 }
