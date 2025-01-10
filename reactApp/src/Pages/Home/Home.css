@@ -1,0 +1,75 @@
+*{
+    /* border: 1px solid red; */
+    background-color: #181818;
+    color: #ffff;
+}
+
+.mainContainer{
+    height: 99vh;
+    width: 99.5vw;
+    padding: 20px 20px;
+}
+
+.header{
+    background-color: var(--primary-component-bg-color);
+    height: 92vh;
+    width: 20vw;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+.userInfo{
+    background-color: var(--primary-component-bg-color);
+    height: 15vh;
+    width:18vw
+}
+.tabs {
+    background-color: var(--primary-component-bg-color);
+    height: 44vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    gap: 10px;
+}
+
+.tabs button{
+    height: 6vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    padding-left: 84px;
+    font-size: 15px;
+    border: none;
+    background-color: var(--primary-component-bg-color);
+} 
+
+.userLogout{
+    background-color: var(--primary-component-bg-color);
+    height: 15vh;
+    width: 18vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userLogout button{
+    background-color: var(--primary-component-bg-color);
+    height: 10vh;
+    width:12vw;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    border: none;
+}
+
+button:hover{
+    background-color: #323232;
+}
