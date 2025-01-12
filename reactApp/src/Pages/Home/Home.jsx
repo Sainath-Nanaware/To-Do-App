@@ -6,6 +6,7 @@ import { FaListCheck } from "react-icons/fa6";
 import { FaCheck } from "react-icons/fa";
 import { LuNotepadText } from "react-icons/lu";
    import { FaSignOutAlt } from "react-icons/fa";
+import TaskWindow from '../../Components/TaskWindow/TaskWindow';
 
 function Home() {
   return (
@@ -25,6 +26,9 @@ function Home() {
                         <button> <FaSignOutAlt />Sign Out</button>
                     </div>
 
+                </div>
+                <div className="taskWindow">
+                    <TaskWindow/>
                 </div>
             </div>
     

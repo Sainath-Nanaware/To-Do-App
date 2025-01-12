@@ -8,6 +8,8 @@
     height: 99vh;
     width: 99.5vw;
     padding: 20px 20px;
+    display: flex;
+    gap: 20px;
 }
 
 .header{
@@ -74,4 +76,15 @@
 
 button:hover{
     background-color: #323232;
+}
+
+/* Task wondow-component container */
+.taskWindow{
+    height:92vh;
+    width: 76vw;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--primary-border-color);
+    background-color: var(--primary-component-bg-color);
+
 }
