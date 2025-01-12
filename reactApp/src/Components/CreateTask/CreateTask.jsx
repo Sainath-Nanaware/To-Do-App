@@ -7,9 +7,9 @@ function CreateTask() {
         <form action=""  className="createTaskForm">
           <h2>Create Task</h2>
           <label htmlFor="title">Title</label>
-          <input type="text"name='title' id='title' placeholder='e.g. Attend Metting. ' /><br></br>
+          <input type="text"name='title' id='title' placeholder='e.g. Attend Meetting. ' /><br></br>
           <label htmlFor="desc">Description</label>
-          <textarea type="text" name='desc' id='desc' placeholder='e.g.  Metting with marketing team ' /><br></br>
+          <textarea type="text" name='desc' id='desc' placeholder='e.g.  Meetting with marketing team ' /><br></br>
           <label htmlFor="date">Date</label>
           <input type="date" name="date" id="date" /><br></br>
           <div className="checkInputs">

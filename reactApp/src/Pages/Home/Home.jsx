@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Home.css"
 import UserInfo from '../../Components/UserInfo/UserInfo'
 import { AiFillHome } from "react-icons/ai";
 import { FaListCheck } from "react-icons/fa6";
 import { FaCheck } from "react-icons/fa";
 import { LuNotepadText } from "react-icons/lu";
-   import { FaSignOutAlt } from "react-icons/fa";
+import { FaSignOutAlt } from "react-icons/fa";
 import TaskWindow from '../../Components/TaskWindow/TaskWindow';
 
 function Home() {
+
+        const [tab,setTab]=useState("All Tasks")
+
+
   return (
         <>
             <div className="mainContainer">
@@ -17,10 +21,10 @@ function Home() {
                             <UserInfo/>
                     </div>
                     <div className="tabs">
-                        <button> < AiFillHome /> All Tasks</button>
-                        <button><FaListCheck />Important</button>
-                        <button><FaCheck />Completed</button>
-                        <button><LuNotepadText />Do it Now</button>
+                        <button onClick={()=>{setTab("All Tasks")}}> < AiFillHome /> All Tasks</button>
+                        <button onClick={()=>{setTab("Important")}}><FaListCheck />Important</button>
+                        <button onClick={()=>{setTab("Completed")}}><FaCheck />Completed</button>
+                        <button onClick={()=>{setTab("Do it Now")}}><LuNotepadText />Do it Now</button>
                     </div>
                     <div className="userLogout">
                         <button> <FaSignOutAlt />Sign Out</button>
@@ -28,7 +32,7 @@ function Home() {
 
                 </div>
                 <div className="taskWindow">
-                    <TaskWindow/>
+                    <TaskWindow title={tab}/>
                 </div>
             </div>
     

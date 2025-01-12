@@ -38,13 +38,17 @@ input {
 }
 #title{
     height: 7vh;
+   padding-left: 6px;
 }
 #desc{
     height: 20vh;
    padding-top: 10px;
+   padding-left: 6px;
+   border: none;
 }
 
 #date{
+   padding-left: 6px;
     height: 6vh;
 
 }
