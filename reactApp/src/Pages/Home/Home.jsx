@@ -17,7 +17,7 @@ function Home() {
                             <UserInfo/>
                     </div>
                     <div className="tabs">
-                        <button> < AiFillHome /> All Tabs</button>
+                        <button> < AiFillHome /> All Tasks</button>
                         <button><FaListCheck />Important</button>
                         <button><FaCheck />Completed</button>
                         <button><LuNotepadText />Do it Now</button>

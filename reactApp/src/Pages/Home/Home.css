@@ -82,7 +82,7 @@ button:hover{
 .taskWindow{
     height:92vh;
     width: 76vw;
-    padding: 10px;
+    padding: 16px;
     border-radius: 10px;
     border: 1px solid var(--primary-border-color);
     background-color: var(--primary-component-bg-color);
