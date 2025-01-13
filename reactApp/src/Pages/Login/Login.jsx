@@ -24,7 +24,7 @@ function Login() {
                 if(resp.status===200){
                     const respData=await resp.json()
                     localStorage.setItem("token",respData.token)
-                    localStorage.setItem("username",resp.userName) 
+                    localStorage.setItem("username",respData.userName) 
                     navigate('dashboard')   
                 }else{
                     alert("something went's wrong!")

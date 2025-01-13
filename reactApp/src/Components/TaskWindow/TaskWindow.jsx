@@ -1,6 +1,7 @@
 import React from 'react'
 import "./TaskWindow.css"
 import AddNewTask from '../AddNewTask/AddNewTask'
+import TaskCard from '../TaskCard/TaskCard'
 
 function TaskWindow({title}) {
   return (
@@ -13,6 +14,7 @@ function TaskWindow({title}) {
             </div>
             {/* All task cards container */}
             <div className="allTask">
+                <TaskCard/>
                 <AddNewTask/>
             </div>
         </div>

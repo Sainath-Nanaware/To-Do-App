@@ -10,8 +10,10 @@ input {
 }
 
 .createTaskContainer{
-    background:none;
-    /* border: 1px solid red; */
+    background-color: rgba(255, 255, 255, 0.4);
+    display: none;
+     -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
     height: 99vh;
     width: 100%;
     display: flex;

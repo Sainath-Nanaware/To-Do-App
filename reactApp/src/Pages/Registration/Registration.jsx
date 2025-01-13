@@ -24,8 +24,8 @@ const Registration = () => {
                 const resp= await fetch("https://todo-backend-two-bice.vercel.app/register",data);
                 if(resp.status===201){
                     const respData=await resp.json()
-                    localStorage.setItem("token",respData.token)
-                    localStorage.setItem("username",resp.userName) 
+                    // localStorage.setItem("token",respData.token)
+                    // localStorage.setItem("username",resp.userName) 
                     navigate('/')   
                 }else{
                     alert("something went's wrong!")

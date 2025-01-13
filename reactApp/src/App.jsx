@@ -4,6 +4,7 @@ import Home from './Pages/Home/Home'
 import CreateTask from './Components/CreateTask/CreateTask'
 import Login from './Pages/Login/Login'
 import Registration from './Pages/Registration/Registration'
+import TaskCard from './Components/TaskCard/TaskCard'
 function App() {
 
   return (
@@ -14,6 +15,8 @@ function App() {
           <Route path='/registration' element={<Registration/>}/>
           <Route path='/dashboard' element={<Home/>}/>
           <Route path='/createTask' element={<CreateTask/>}/>
+          <Route path='/taskCard' element={<TaskCard/>}/>
+
 
       </Routes>
     </BrowserRouter>
