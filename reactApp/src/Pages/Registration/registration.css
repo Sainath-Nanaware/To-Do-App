@@ -1,9 +1,8 @@
-
-*{
+* {
     /* border: 1px solid red; */
 }
 
-.loginContainer{
+.regiContainer {
     width: 100%;
     height: 99vh;
     display: flex;
@@ -11,7 +10,7 @@
     align-items: center;
 }
 
-.loginForm{
+.regiForm {
     width: 40vw;
     height: 60vh;
     display: flex;
@@ -23,16 +22,17 @@
     border: 1px solid #6b6b6b
 }
 
-.loginForm input{
+.regiForm input {
     border-radius: 5px;
     /* border: 1px solid red; */
     font-size: 18px;
     padding: 5px;
     height: 8vh;
-    width:30vw;
+    width: 30vw;
     border: 1px solid #6b6b6b
 }
-.loginForm button{
+
+.regiForm button {
     border-radius: 5px;
     width: 12vw;
     font-size: 18px;
@@ -40,10 +40,11 @@
     border: none;
     border: 1px solid #6b6b6b;
 }
-.loginForm h1{
+
+.regiForm h1 {
     border-bottom: 2px solid red;
 }
-#linkText{
-    color:#f2de97;
+#linkText {
+    color: #f2de97;
 
 }

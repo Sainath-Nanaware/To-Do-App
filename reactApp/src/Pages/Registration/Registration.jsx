@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import './login.css'
-import {Link,  useNavigate} from 'react-router-dom'
-function Login() {
+import './registration.css'
+import {useNavigate,Link} from 'react-router-dom'
+
+const Registration = () => {
     const [username,setUserName]=useState("")
     const [password,setPassword]=useState("")
     const navigate=useNavigate()
@@ -20,12 +21,12 @@ function Login() {
         }
         try{
             if(password!="" && username!=""){
-                const resp= await fetch("https://todo-backend-two-bice.vercel.app/login",data);
-                if(resp.status===200){
+                const resp= await fetch("https://todo-backend-two-bice.vercel.app/register",data);
+                if(resp.status===201){
                     const respData=await resp.json()
                     localStorage.setItem("token",respData.token)
                     localStorage.setItem("username",resp.userName) 
-                    navigate('dashboard')   
+                    navigate('/')   
                 }else{
                     alert("something went's wrong!")
                 }
@@ -41,27 +42,19 @@ function Login() {
 
     }
   return (
-    <>
-        <div className='loginContainer'>
-            <form className='loginForm' onSubmit={(e)=>handleSubmit(e)}>
-                <h1>Login</h1>
+       <>
+        <div className='regiContainer'>
+            <form className='regiForm' onSubmit={(e)=>handleSubmit(e)}>
+                <h1>Registration</h1>
                 <input type="text" placeholder='Enter username' onChange={(e)=>setUserName(e.target.value)} value={username} />
                 <input type="password" placeholder='Enter password' onChange={(e)=>setPassword(e.target.value)} value={password} />
-                <button type='submit'>Login</button>
-                <Link to='/registration' id='linkTag'><p id='linkText'>Not memeber? sign up now</p></Link>
+                <button type='submit'>Register</button>
+                <Link to='/'id='linkTag'><p id='linkText'>Login</p></Link>
             </form>
         </div>
     
     </>
-    
   )
 }
 
-export default Login
-
-
-// navigate() in react route dom
-//local storage 
-//post request need header with content type  and token
-//tostify
-//back-drop filter
+export default Registration

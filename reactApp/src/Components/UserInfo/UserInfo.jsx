@@ -3,7 +3,7 @@ import "./UserInfo.css"
 function UserInfo() {
   return (
     <div className='userInfo'>
-            <img src="./s_email.logo.jpg" alt="" />
+            <img src="./user-circle.png" alt="" />
             <p>Sainath  Nanaware</p>
     </div>
   )
