@@ -12,7 +12,9 @@
         justify-content: start;
         align-items: start;
 }
-
+h2{
+    background-color: var(--primary-component-bg-color);
+}
 #descPara{
     border-radius: 5px;
     font-size: 12px;

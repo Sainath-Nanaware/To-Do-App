@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "./Home.css"
+import { useNavigate } from 'react-router-dom';
 import UserInfo from '../../Components/UserInfo/UserInfo'
 import { AiFillHome } from "react-icons/ai";
 import { FaListCheck } from "react-icons/fa6";
@@ -9,7 +10,7 @@ import { FaSignOutAlt } from "react-icons/fa";
 import TaskWindow from '../../Components/TaskWindow/TaskWindow';
 
 function Home() {
-
+        const navigate=useNavigate()
         const [tab,setTab]=useState("All Tasks")
 
 
@@ -27,7 +28,7 @@ function Home() {
                         <button onClick={()=>{setTab("Do it Now")}}><LuNotepadText />Do it Now</button>
                     </div>
                     <div className="userLogout">
-                        <button> <FaSignOutAlt />Sign Out</button>
+                        <button onClick={()=>{navigate('/')}}> <FaSignOutAlt />Sign Out</button>
                     </div>
 
                 </div>
