@@ -1,5 +1,5 @@
 import React from 'react'
-import "./userInfo.css"
+import "./UserInfo.css"
 function UserInfo() {
   return (
     <div className='userInfo'>

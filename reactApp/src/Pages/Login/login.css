@@ -1,0 +1,9 @@
+
+*{
+    border: 1px solid red;
+}
+
+.loginContainer{
+    width: 100%;
+    height: 99vh;
+}
