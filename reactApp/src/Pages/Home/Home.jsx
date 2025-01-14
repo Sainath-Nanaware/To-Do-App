@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import "./Home.css"
 import { useNavigate } from 'react-router-dom';
 import UserInfo from '../../Components/UserInfo/UserInfo'
@@ -11,8 +11,39 @@ import TaskWindow from '../../Components/TaskWindow/TaskWindow';
 
 function Home() {
         const navigate=useNavigate()
-        const [tab,setTab]=useState("All Tasks")
+        const [tab,setTab]=useState("Create New Task")
 
+        //call api get todods 
+        var resObj=[]
+        const [todos, setTodos] = useState([]);
+        // useEffect(() => {
+        //     getTask();
+        // }, []);
+
+        async function getTask(){
+
+        try {
+          const res = await fetch(
+            "https://todo-backend-two-bice.vercel.app/todos",
+            {
+              headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+                contentType: "application/json",
+              },
+            }
+          );
+
+          if (res.status === 200) {
+                resObj = await res.json();
+            // setTodos(resObj);
+            } else if (res.status === 401) {
+              alert("You are not login, Please login first");
+               navigate("/");
+            }}catch (error) {
+             console.log(error);
+            }
+        }
+        getTask()
 
   return (
         <>
@@ -22,10 +53,28 @@ function Home() {
                             <UserInfo/>
                     </div>
                     <div className="tabs">
-                        <button onClick={()=>{setTab("All Tasks")}}> < AiFillHome /> All Tasks</button>
-                        <button onClick={()=>{setTab("Important")}}><FaListCheck />Important</button>
-                        <button onClick={()=>{setTab("Completed")}}><FaCheck />Completed</button>
-                        <button onClick={()=>{setTab("Do it Now")}}><LuNotepadText />Do it Now</button>
+                        <button onClick={
+                            ()=>{setTab("All Tasks")
+                                setTodos(resObj)
+                            }}> 
+                        < AiFillHome /> All Tasks</button>
+                        <button onClick={
+                            ()=>{setTab("Important")
+                                setTodos([])
+                            }}>
+                        <FaListCheck />Important</button>
+                        <button onClick={
+                            ()=>{setTab("Completed")
+                                const newArr = resObj.filter((element) => element.completed);
+                                setTodos(newArr)
+                            }}>
+                        <FaCheck />Completed</button>
+                        <button onClick={
+                            ()=>{setTab("Do it Now")
+                               const newArr = resObj.filter((element) => !element.completed);
+                                setTodos(newArr)
+                            }}>
+                        <LuNotepadText />Do it Now</button>
                     </div>
                     <div className="userLogout">
                         <button onClick={()=>{navigate('/')}}> <FaSignOutAlt />Sign Out</button>
@@ -33,7 +82,7 @@ function Home() {
 
                 </div>
                 <div className="taskWindow">
-                    <TaskWindow title={tab}/>
+                    <TaskWindow headingTitle={tab} todos={todos}/>
                 </div>
             </div>
     
