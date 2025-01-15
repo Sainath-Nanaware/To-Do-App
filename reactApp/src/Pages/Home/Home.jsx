@@ -11,13 +11,13 @@ import TaskWindow from '../../Components/TaskWindow/TaskWindow';
 
 function Home() {
         const navigate=useNavigate()
-        const [tab,setTab]=useState("Create New Task")
+        const [tab,setTab]=useState("All Tasks")
 
         //call api get todods 
         var resObj=[]
         const [todos, setTodos] = useState([]);
         // useEffect(() => {
-        //     getTask();
+        //     setTodos(resObj);    
         // }, []);
 
         async function getTask(){
@@ -35,7 +35,7 @@ function Home() {
 
           if (res.status === 200) {
                 resObj = await res.json();
-            // setTodos(resObj);
+                // setTodos(resObj);
             } else if (res.status === 401) {
               alert("You are not login, Please login first");
                navigate("/");
