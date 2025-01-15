@@ -13,7 +13,7 @@ const AddNewTask = () => {
         <div className='newTaskContainer'onClick={showPopup} >
           <p >+ Add New Task</p>
         </div>
-        {/* {createTask && <CreateTask/>} */}
+        {createTask && <CreateTask setCreateTask={setCreateTask}/>}
     </>
       )
 }

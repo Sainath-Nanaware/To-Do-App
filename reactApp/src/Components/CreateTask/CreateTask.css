@@ -20,6 +20,8 @@ input {
     justify-content: center;
     align-items: center;
     position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .createTaskForm{
@@ -83,11 +85,30 @@ input {
     justify-content: space-between;
 }
 
-.createTaskForm button{
-    margin-left: 20vw;
+.buttonFotter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-component-bg-color);
+}
+#cancelBtn{
+    border: 1px solid var(--primary-border-color);
+    background-color: var(--primary-component-bg-color);
+    color: red;
+    width: 7vw;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 5px;
+}
+#cancelBtn:hover{
+    border: 1px solid red;
+}
+#createBtn{
+    width: 10vw;
     font-size: 18px;
     padding: 8px;
     border-radius: 5px;
     background-color: rgb(38, 122, 191);
     border: none;
+    color: #ffff;
 }
